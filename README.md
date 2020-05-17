@@ -150,6 +150,21 @@ EOF  all  create  destroy  help  quit  show  update
 (hbnb) quit
 ```
 
+## Web Dynamic
+
+This project contains the 4 part of the project Airbnb, in this repositorie, we work in:
+
+* How cool it is to request your own API
+* How to modify an HTML element style
+* How to get and update an HTML element content
+* How to modify the DOM
+* How to make a GET request with jQuery Ajax
+* How to make a POST request with jQuery Ajax
+* How to listen/bind to DOM events
+* How to listen/bind to user events
+
+The main objective of this task is integrate the data trought the RestApi desing before with the web views for show dynamic events to get data. 
+
 ## Bugs
 No known bugs at this time. 
 
@@ -157,8 +172,10 @@ No known bugs at this time.
 Alexa Orrico - [Github](https://github.com/alexaorrico) / [Twitter](https://twitter.com/alexa_orrico)  
 Jennifer Huang - [Github](https://github.com/jhuang10123) / [Twitter](https://twitter.com/earthtojhuang)  
 Jhoan Zamora - [Github](https://github.com/jzamora5) / [Twitter](https://twitter.com/JhoanZamora10)  
-David Ovalle - [Github](https://github.com/Nukemenonai) / [Twitter](https://twitter.com/disartDave)
+David Ovalle - [Github](https://github.com/Nukemenonai) / [Twitter](https://twitter.com/disartDave)  
+Jackson Moreno - [Github](https://github.com/jaarmore)  
+Diego Garzon - [Github](https://github.com/diesgaro)
 
-Second part of Airbnb: Joann Vuong
+Third part of Airbnb: Jhoan Zamora and David Ovalle
 ## License
 Public Domain. No copy write protection. 
