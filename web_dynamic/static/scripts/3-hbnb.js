@@ -29,32 +29,47 @@ $(document).ready(function () {
   const URL = 'http://0.0.0.0:5001/api/v1/places_search/';
   const myData = {};
   $.ajax({
-    type: 'POST',
+    url: URL,
+    type: 'post',
     contentType: 'application/json',
-    data: myData,
+    data: JSON.stringify(myData),
     success: function (response) {
-      for (const places of response) {
+      /* console.log(response); */
+      $.each(response, function () {
+        /* console.log(this); */
         const template = `
           <article>
-          <div class="title_box">
-            <h2>${places.name}</h2>
-            <div class="price_by_night">$${places.price_by_night}</div>
-          </div>
-          <div class="information">
-            <div class="max_guest">${places.max_guest} Guest</div>
-                <div class="number_rooms">${places.number_rooms} Bedroom</div>
-                <div class="number_bathrooms">${places.number_bathrooms} Bathroom</div>
-          </div>
-          <div class="user">
-                <b>Owner:</b> ${places.user.first_name } ${places.user.last_name}
-              </div>
-              <div class="description">
-            ${places.description}
-              </div>
+            <div class="title_box">
+              <h2>` + this.name + `</h2>
+              <div class="price_by_night">$` + this.price_by_night + `</div>
+            </div>
+            <div class="information">
+              <div class="max_guest">` + this.max_guest + ` Guest</div>
+              <div class="number_rooms">` + this.number_rooms + ` Bedroom</div>
+              <div class="number_bathrooms">` + this.number_bathrooms + ` Bathroom</div>
+            </div>
+            <div class="user">
+              <b>Owner:</b> ` + userName(this.user_id) + `
+            </div>
+            <div class="description">` + this.description + `</div>
           </article>
         `;
         $('section.places').append(template);
-      }
+      });
     }
   });
+
+  function userName (idUser) {
+    let user = '';
+    $.ajax({
+      url: 'http://0.0.0.0:5001/api/v1/users/' + idUser,
+      dataType: 'json',
+      async: false,
+      success: function (data) {
+        user = data.first_name + ' ' + data.last_name;
+      }
+    });
+    /* console.log(user); */
+    return user;
+  }
 });
