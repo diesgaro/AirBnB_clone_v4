@@ -163,7 +163,15 @@ This project contains the 4 part of the project Airbnb, in this repositorie, we 
 * How to listen/bind to DOM events
 * How to listen/bind to user events
 
-The main objective of this task is integrate the data trought the RestApi desing before with the web views for show dynamic events to get data. 
+The main objective of this task is integrate the data trought the RestApi desing before with the web views for show dynamic events to get data.
+
+```
+Run REST API:
+HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db HBNB_API_PORT=5001 python3 -m api.v1.app
+
+Run Web Server:
+HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_pwd HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_dev_db HBNB_TYPE_STORAGE=db python3 -m web_dynamic.4-hbnb
+```
 
 ## Bugs
 No known bugs at this time. 
